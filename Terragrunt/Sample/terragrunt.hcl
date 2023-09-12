@@ -4,9 +4,11 @@
 # Note the extra `/` after the protocol is required for the shorthand
 # notation.
 
+terragrunt {
+  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
+}
 
 terraform {
-  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
   backend "s3" {
     bucket         = "cdng-terraform-state"
     key            = "jpmc_eks_ecs_repro.tfstate"
