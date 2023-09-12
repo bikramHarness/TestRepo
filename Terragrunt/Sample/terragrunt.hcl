@@ -6,6 +6,7 @@
 
 
 terraform {
+  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
   backend "s3" {
     bucket         = "cdng-terraform-state"
     key            = "jpmc_eks_ecs_repro.tfstate"
