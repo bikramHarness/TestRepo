@@ -3,17 +3,13 @@
 # "tfr://registry.terraform.io/terraform-aws-modules/vpc/aws?version=3.5.0".
 # Note the extra `/` after the protocol is required for the shorthand
 # notation.
-terraform {
-  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
-}
+
 
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state"
-    key            = "stage/mysql/terraform.tfstate"
+    bucket         = "cdng-terraform-state"
+    key            = "jpmc_eks_ecs_repro.tfstate"
     region         = "us-east-1"
-    encrypt        = true
-    dynamodb_table = "my-lock-table"
   }
 }
 
