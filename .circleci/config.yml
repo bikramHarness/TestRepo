@@ -24,9 +24,8 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
-      
-workflows:
   say-hello-workflow_duplicate:
     jobs:
       - say-hello
       - say-hello
+  
